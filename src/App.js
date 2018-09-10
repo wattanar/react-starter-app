@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
   Container
@@ -12,7 +11,7 @@ import {
 import Home from './pages/Home';
 import About from './pages/About';
 
-export default class App extends Component {
+export default class App extends React.Component {
   constructor() {
     super();
 

@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Example from '../components/Example';
 
-export default class Home extends Component {
+export default class Home extends React.Component {
   render() {
     return (
       <React.Fragment>

@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const AppContext = React.createContext();
 
-export class Provider extends Component {
+export class Provider extends React.Component {
   state = {
     counter: 0
   };
