@@ -31,7 +31,7 @@ export default class App extends React.Component {
     return (
       <Router>
         <React.Fragment>
-          <Navbar color="primary" dark expand="md">
+          <Navbar color="primary" fixed="top" dark expand="md">
             <Container>
               <Link className="navbar-brand" to="/">
                 {this.state.appName}
@@ -53,7 +53,7 @@ export default class App extends React.Component {
               </Collapse>
             </Container>
           </Navbar>
-          <Container style={{ marginTop: '20px' }}>
+          <Container style={{ marginTop: '70px' }}>
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
           </Container>
