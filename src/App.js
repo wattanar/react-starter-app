@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import {
   Collapse,
   Navbar,
@@ -10,6 +10,7 @@ import {
 } from 'reactstrap';
 import Home from './pages/Home';
 import About from './pages/About';
+import NotFound from './pages/NotFound';
 
 export default class App extends React.Component {
   constructor() {
@@ -54,8 +55,11 @@ export default class App extends React.Component {
             </Container>
           </Navbar>
           <Container style={{ marginTop: '70px' }}>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/about" component={About} />
+              <Route component={NotFound} />
+            </Switch>
           </Container>
         </React.Fragment>
       </Router>
