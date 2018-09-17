@@ -8,13 +8,13 @@ import {
   NavItem,
   Container
 } from 'reactstrap';
-import Home from './pages/Home';
-import About from './pages/About';
-import NotFound from './pages/NotFound';
+import Home from './components/Home/Home';
+import Counter from './components/Counter/CounterContainer';
+import NotFound from './components/Landing/NotFound';
 
 export default class App extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       appName: 'React Starter App',
@@ -32,7 +32,7 @@ export default class App extends React.Component {
     return (
       <Router>
         <React.Fragment>
-          <Navbar color="primary" fixed="top" dark expand="md">
+          <Navbar color="light" fixed="top" dark expand="md">
             <Container>
               <Link className="navbar-brand" to="/">
                 {this.state.appName}
@@ -46,8 +46,8 @@ export default class App extends React.Component {
                     </Link>
                   </NavItem>
                   <NavItem>
-                    <Link className="nav-link" to="/about">
-                      About
+                    <Link className="nav-link" to="/counter">
+                      Counter
                     </Link>
                   </NavItem>
                 </Nav>
@@ -57,7 +57,7 @@ export default class App extends React.Component {
           <Container style={{ marginTop: '70px' }}>
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route exact path="/about" component={About} />
+              <Route exact path="/counter" component={Counter} />
               <Route component={NotFound} />
             </Switch>
           </Container>
