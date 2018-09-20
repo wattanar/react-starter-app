@@ -1,12 +1,9 @@
 import React from 'react';
 
 class Counter extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   componentDidMount() {
-    this.props.current;
+    this.props.current();
   }
 
   inc() {
