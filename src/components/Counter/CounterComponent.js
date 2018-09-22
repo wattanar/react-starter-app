@@ -3,10 +3,6 @@ import { connect } from 'react-redux';
 import { inc, dec, current } from './CounterAction';
 
 class Counter extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     this.props.dispatch(current());
   }
