@@ -9,7 +9,7 @@ import {
   Container
 } from 'reactstrap';
 import Home from './components/Home/Home';
-import Counter from './components/Counter/CounterContainer';
+import Counter from './components/Counter/CounterComponent';
 import NotFound from './components/Landing/NotFound';
 
 export default class App extends React.Component {
