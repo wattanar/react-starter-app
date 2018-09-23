@@ -1,17 +1,18 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { inc, dec, current } from './CounterAction';
 
 class Counter extends React.Component {
-
   componentDidMount() {
-    this.props.current();
+    this.props.dispatch(current());
   }
 
   inc() {
-    this.props.inc(this.props.counterState.counter);
+    this.props.dispatch(inc(this.props.counterState.counter));
   }
 
   dec() {
-    this.props.dec(this.props.counterState.counter);
+    this.props.dispatch(dec(this.props.counterState.counter));
   }
 
   render() {
@@ -36,4 +37,10 @@ class Counter extends React.Component {
   }
 }
 
-export default Counter;
+const mapStateToProps = state => {
+  return {
+    counterState: state.CounterReducer
+  };
+};
+
+export default connect(mapStateToProps)(Counter);

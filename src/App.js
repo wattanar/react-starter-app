@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, BrowserRouter as Route, Link, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import {
   Collapse,
   Navbar,
@@ -9,7 +9,7 @@ import {
   Container
 } from 'reactstrap';
 import Home from './components/Home/Home';
-import Counter from './components/Counter/CounterContainer';
+import Counter from './components/Counter/CounterComponent';
 import NotFound from './components/Landing/NotFound';
 
 export default class App extends React.Component {
@@ -30,7 +30,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <HashRouter>
+      <Router>
         <React.Fragment>
           <Navbar color="light" fixed="top" dark expand="md">
             <Container>
@@ -62,7 +62,7 @@ export default class App extends React.Component {
             </Switch>
           </Container>
         </React.Fragment>
-      </HashRouter>
+      </Router>
     );
   }
 }
