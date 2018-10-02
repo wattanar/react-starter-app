@@ -8,9 +8,9 @@ import {
   NavItem,
   Container
 } from 'reactstrap';
-import Home from './components/Home/Home';
-import Counter from './components/Counter/CounterComponent';
-import NotFound from './components/Landing/NotFound';
+import Home from './pages/Home';
+import Counter from './pages/Counter';
+import NotFound from './pages/NotFound';
 
 export default class App extends React.Component {
   constructor(props) {
