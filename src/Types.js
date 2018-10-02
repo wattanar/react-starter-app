@@ -1,3 +1,4 @@
+// Counter
 export const COUNTER_CURRENT = 'COUNTER_CURRENT';
 export const COUNTER_INC = 'COUNTER_INC';
 export const COUNTER_DEC = 'COUNTER_DEC';
