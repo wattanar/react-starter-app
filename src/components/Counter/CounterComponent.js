@@ -1,6 +1,6 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { inc, dec, current } from './CounterAction';
+import React from "react";
+import { connect } from "react-redux";
+import { inc, dec, current } from "./CounterAction";
 
 class Counter extends React.Component {
   componentDidMount() {
@@ -24,7 +24,7 @@ class Counter extends React.Component {
           <button
             className="btn btn-danger"
             onClick={this.dec.bind(this)}
-            style={{ marginRight: '10px' }}
+            style={{ marginRight: "10px" }}
           >
             - 1
           </button>
