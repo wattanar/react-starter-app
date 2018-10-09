@@ -2,25 +2,25 @@ import {
   COUNTER_CURRENT,
   COUNTER_INC,
   COUNTER_DEC,
-  SET_CURRENT_COUNTER
+  COUNTER_SET_CURRENT
 } from './CounterType';
 
-export const current = () => ({
+export const getCurrent = () => ({
   type: COUNTER_CURRENT,
   payload: 0
 });
 
-export const inc = counter => ({
+export const increase = counter => ({
   type: COUNTER_INC,
   payload: (counter += 1)
 });
 
-export const dec = counter => ({
+export const decrease = counter => ({
   type: COUNTER_DEC,
   payload: (counter -= 1)
 });
 
 export const setCurrent = () => ({
-  type: SET_CURRENT_COUNTER,
+  type: COUNTER_SET_CURRENT,
   payload: 100
 });

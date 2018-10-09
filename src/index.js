@@ -5,9 +5,8 @@ import Store from './Store';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-import './styles/spectre/spectre.min.css';
-import './styles/spectre/spectre-exp.min.css';
-import './styles/spectre/spectre-icons.min.css';
+import './styles/sanitize.css';
+import './styles/app.css';
 
 ReactDOM.render(
   <Provider store={Store}>

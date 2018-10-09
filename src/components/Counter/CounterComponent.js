@@ -1,17 +1,17 @@
 import React from 'react';
-import { inc, dec, current } from './CounterAction';
+import { increase, decrease, getCurrent } from './CounterAction';
 
 class Counter extends React.Component {
   componentDidMount() {
-    this.props.dispatch(current());
+    this.props.dispatch(getCurrent());
   }
 
-  inc() {
-    this.props.dispatch(inc(this.props.counterState.counter));
+  increase() {
+    this.props.dispatch(increase(this.props.counterState.counter));
   }
 
-  dec() {
-    this.props.dispatch(dec(this.props.counterState.counter));
+  decrease() {
+    this.props.dispatch(decrease(this.props.counterState.counter));
   }
 
   render() {
@@ -22,12 +22,15 @@ class Counter extends React.Component {
         <div>
           <button
             className="btn btn-danger"
-            onClick={this.dec.bind(this)}
+            onClick={this.decrease.bind(this)}
             style={{ marginRight: '10px' }}
           >
             - 1
           </button>
-          <button className="btn btn-success" onClick={this.inc.bind(this)}>
+          <button
+            className="btn btn-success"
+            onClick={this.increase.bind(this)}
+          >
             + 1
           </button>
         </div>

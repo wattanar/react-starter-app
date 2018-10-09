@@ -1,3 +1,16 @@
-.navbar-block {
-  box-shadow: 0 5px 10px 0 rgba(50, 50, 50, 0.06);
+.app-container {
+  max-width: '640px';
+  margin: auto;
+  text-align: center;
+}
+
+.app-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+  margin-right: 10px;
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { setCurrentCounter } from '../../services/CounterService';
 
 class Home extends React.Component {
@@ -10,7 +11,7 @@ class Home extends React.Component {
     return (
       <React.Fragment>
         <h1>Home Page</h1>
-        <p>This is home page</p>
+        <p>Current counter is : {this.props.counterState.counter}</p>
         <div>
           <button
             onClick={this.setCurrentCounter.bind(this)}
@@ -24,4 +25,10 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+const mapStateToProps = state => {
+  return {
+    counterState: state.CounterReducer
+  };
+};
+
+export default connect(mapStateToProps)(Home);
