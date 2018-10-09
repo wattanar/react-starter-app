@@ -1,16 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  Nav,
-  NavItem,
-  Container
-} from 'reactstrap';
 import Home from './components/Home';
 import Counter from './components/Counter';
 import NotFound from './components/Common/NotFound';
+
+import './styles/app.css';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -32,35 +26,38 @@ export default class App extends React.Component {
     return (
       <Router>
         <React.Fragment>
-          <Navbar color="light" fixed="top" dark expand="md">
-            <Container>
-              <Link className="navbar-brand" to="/">
-                {this.state.appName}
+          <header
+            className="navbar navbar-block"
+            style={{ padding: '10px 20px' }}
+          >
+            <section className="navbar-section">
+              <Link to="/" className="navbar-brand mr-2">
+                React Starter App
               </Link>
-              <NavbarToggler onClick={this.toggle.bind(this)} />
-              <Collapse isOpen={this.state.isOpen} navbar>
-                <Nav className="ml-auto" navbar>
-                  <NavItem>
-                    <Link className="nav-link" to="/">
-                      Home
-                    </Link>
-                  </NavItem>
-                  <NavItem>
-                    <Link className="nav-link" to="/counter">
-                      Counter
-                    </Link>
-                  </NavItem>
-                </Nav>
-              </Collapse>
-            </Container>
-          </Navbar>
-          <Container style={{ marginTop: '70px' }}>
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/counter" component={Counter} />
-              <Route component={NotFound} />
-            </Switch>
-          </Container>
+            </section>
+            <section className="navbar-section">
+              <Link to="/" className="btn btn-link">
+                Home
+              </Link>
+              <Link to="/counter" className="btn btn-link">
+                Counter
+              </Link>
+              <Link to="/404" className="btn btn-link">
+                Not found
+              </Link>
+            </section>
+          </header>
+          <div className="container" style={{ padding: '10px 20px' }}>
+            <div className="columns">
+              <div className="column col-12">
+                <Switch>
+                  <Route exact path="/" component={Home} />
+                  <Route exact path="/counter" component={Counter} />
+                  <Route component={NotFound} />
+                </Switch>
+              </div>
+            </div>
+          </div>
         </React.Fragment>
       </Router>
     );
