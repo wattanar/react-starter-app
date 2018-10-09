@@ -10,7 +10,7 @@
   padding: 0;
 }
 
-li {
+.app-nav li {
   display: inline;
   margin-right: 10px;
 }
