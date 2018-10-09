@@ -1,16 +1,16 @@
 .app-container {
-  max-width: '640px';
+  max-width: "640px";
   margin: auto;
   text-align: center;
 }
 
-.app-nav {
+.app-navbar {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.app-nav li {
+.app-navbar li {
   display: inline;
   margin-right: 10px;
 }
