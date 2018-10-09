@@ -3,7 +3,7 @@ import {
   COUNTER_INC,
   COUNTER_DEC,
   SET_CURRENT_COUNTER
-} from "../../Types";
+} from './CounterType';
 
 const intitialState = {
   counter: 0
