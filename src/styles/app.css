@@ -1,16 +1,3 @@
-.app-container {
-  max-width: "640px";
-  margin: auto;
-  text-align: center;
-}
-
-.app-navbar {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.app-navbar li {
-  display: inline;
-  margin-right: 10px;
+.header-top-space {
+  margin-top: 20px;
 }
