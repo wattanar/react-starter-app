@@ -1,22 +1,26 @@
-import React from "react";
+import React from 'react';
+import './Counter.css';
 
 const Counter = props => {
   return (
-    <div className="text-center">
+    <React.Fragment>
       <h1>Counter</h1>
       <h3>{props.counterState.counter}</h3>
       <div>
         <button
-          className="btn btn-danger"
-          onClick={props.decrease(1)}
-          style={{ marginRight: "10px" }}>
+          className="counter-button"
+          onClick={props.decreaseCounter.bind(this, props.counterState.counter)}
+        >
           - 1
         </button>
-        <button className="btn btn-success" onClick={props.increase(1)}>
+        <button
+          className="counter-button"
+          onClick={props.increaseCounter.bind(this, props.counterState.counter)}
+        >
           + 1
         </button>
       </div>
-    </div>
+    </React.Fragment>
   );
 };
 export default Counter;
