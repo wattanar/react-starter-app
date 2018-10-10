@@ -1,6 +1,6 @@
 import Store from '../Store';
-import { setCurrent } from '../components/Counter/CounterAction';
+import { setCurrentCounter } from '../components/Counter/CounterAction';
 
-export const setCurrentCounter = () => {
-  Store.dispatch(setCurrent());
+export const _setCurrentCounter = () => {
+  Store.dispatch(setCurrentCounter());
 };

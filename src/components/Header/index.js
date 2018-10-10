@@ -1,9 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <ul class="app-navbar">
+    <ul className="app-navbar">
       <li>
         <Link to="/">Home</Link>
       </li>
