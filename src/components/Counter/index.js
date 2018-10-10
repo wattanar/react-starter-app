@@ -1,6 +1,6 @@
-import { connect } from "react-redux";
-import Counter from "./CounterComponent";
-import { increase, decrease } from "./CounterAction";
+import { connect } from 'react-redux';
+import Counter from './CounterComponent';
+import { increaseCounter, decreaseCounter } from './CounterAction';
 
 const mapStateToProps = state => {
   return {
@@ -10,8 +10,12 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    increase: current => dispatch(increase(current)),
-    decrease: current => dispatch(decrease(current))
+    increaseCounter: current => {
+      dispatch(increaseCounter(current));
+    },
+    decreaseCounter: current => {
+      dispatch(decreaseCounter(current));
+    }
   };
 };
 
