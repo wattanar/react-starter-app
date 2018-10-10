@@ -5,8 +5,6 @@ import Store from "./Store";
 import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
 import { BrowserRouter } from "react-router-dom";
-
-import "./styles/sanitize.css";
 import "./styles/app.css";
 
 ReactDOM.render(
