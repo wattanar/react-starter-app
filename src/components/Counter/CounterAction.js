@@ -1,16 +1,20 @@
-import { COUNTER_INC, COUNTER_DEC, COUNTER_SET_CURRENT } from "./CounterType";
+import {
+  COUNTER_INCREASE,
+  COUNTER_DECREASE,
+  COUNTER_SET_CURRENT
+} from './CounterType';
 
-export const increase = counter => ({
-  type: COUNTER_INC,
+export const increaseCounter = counter => ({
+  type: COUNTER_INCREASE,
   payload: (counter += 1)
 });
 
-export const decrease = counter => ({
-  type: COUNTER_DEC,
+export const decreaseCounter = counter => ({
+  type: COUNTER_DECREASE,
   payload: (counter -= 1)
 });
 
-export const setCurrent = () => ({
+export const setCurrentCounter = () => ({
   type: COUNTER_SET_CURRENT,
   payload: 100
 });
