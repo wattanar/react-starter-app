@@ -1,17 +1,3 @@
-import React from "react";
-import { Switch, Route } from "react-router-dom";
-import Home from "../Home";
-import Counter from "../Counter";
-import NotFound from "../Common/NotFound";
+import MainComponent from "./MainComponent";
 
-const Main = () => {
-  return (
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/counter" component={Counter} />
-      <Route component={NotFound} />
-    </Switch>
-  );
-};
-
-export default Main;
+export default MainComponent;
