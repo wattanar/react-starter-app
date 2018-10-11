@@ -1,12 +1,12 @@
 import React from "react";
 import Header from "./components/Header";
-import Main from "./components/Main";
+import Routes from "./Routes";
 
 const App = () => {
   return (
     <React.Fragment>
       <Header />
-      <Main />
+      <Routes />
     </React.Fragment>
   );
 };
