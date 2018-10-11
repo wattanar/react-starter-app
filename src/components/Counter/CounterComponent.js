@@ -1,12 +1,11 @@
-import React from "react";
-import "./Counter.css";
+import React from 'react';
 
 const Counter = props => {
   return (
     <React.Fragment>
       <div className="text-center header-top-space">
         <h1>Counter</h1>
-        <h3>{props.counterState.counter}</h3>
+        <p>Current Counter is : {props.counterState.counter}</p>
         <div className="btn-group">
           <button
             type="button"
@@ -14,7 +13,8 @@ const Counter = props => {
             onClick={props.decreaseCounter.bind(
               this,
               props.counterState.counter
-            )}>
+            )}
+          >
             - 1
           </button>
           <button
@@ -23,7 +23,8 @@ const Counter = props => {
             onClick={props.increaseCounter.bind(
               this,
               props.counterState.counter
-            )}>
+            )}
+          >
             + 1
           </button>
         </div>
