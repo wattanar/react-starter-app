@@ -1,5 +1,5 @@
-import React from "react";
-import { _setCurrentCounter } from "../../services/CounterService";
+import React from 'react';
+import { _setCurrentCounter } from '../../services/CounterService';
 
 const Home = props => {
   return (
@@ -10,12 +10,14 @@ const Home = props => {
         <div className="btn-group">
           <button
             onClick={_setCurrentCounter.bind(this, 0)}
-            className="btn btn-default">
+            className="btn btn-default"
+          >
             Set Counter = 0
           </button>
           <button
             onClick={_setCurrentCounter.bind(this, 100)}
-            className="btn btn-primary">
+            className="btn btn-primary"
+          >
             Set Counter = 100
           </button>
         </div>
