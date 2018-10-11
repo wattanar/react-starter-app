@@ -14,3 +14,22 @@ yarn
 # start app
 yarn start
 ```
+
+# Generate components
+
+Create component with single command.
+
+```shell
+yarn g -n User
+```
+
+All necessary file are generated.
+
+```shell
+src/components/User/
+├── index.js
+├── UserAction.js
+├── UserComponent.js
+├── UserReducer.js
+└── UserType.js
+```
