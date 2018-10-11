@@ -1,12 +1,12 @@
-import { TEMPLATE_ACTION } from './TemplateType';
+import { SAMPLE_ACTION } from "./TemplateType";
 
 const intitialState = {
-  name: ''
+  name: ""
 };
 
 export const CounterReducer = (state = intitialState, action) => {
   switch (action.type) {
-    case TEMPLATE_ACTION:
+    case SAMPLE_ACTION:
       return { ...state, name: action.payload };
     default:
       return state;
