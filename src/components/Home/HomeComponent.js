@@ -1,21 +1,10 @@
-import React from 'react';
-import { _setCurrentCounter } from '../../services/CounterService';
+import React from "react";
 
-const Home = props => {
+const HomeComponent = props => {
   return (
     <React.Fragment>
-      <h1>Home Page</h1>
-      <p>Current Counter is : {props.counterState.counter}</p>
-      <div>
-        <button
-          onClick={_setCurrentCounter.bind(this)}
-          className="btn btn-primary"
-        >
-          Set Counter = 100
-        </button>
-      </div>
+      <h1 className="top-space">Hello, World!</h1>
     </React.Fragment>
   );
 };
-
-export default Home;
+export default HomeComponent;

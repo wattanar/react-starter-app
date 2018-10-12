@@ -1,17 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { connect } from "react-redux";
+import HeaderComponent from "./HeaderComponent";
 
-const Header = () => {
-  return (
-    <ul className="app-navbar">
-      <li>
-        <Link to="/">Home</Link>
-      </li>
-      <li>
-        <Link to="/counter">Counter</Link>
-      </li>
-    </ul>
-  );
+const mapStateToProps = state => {
+  return {
+    headerState: state.HeaderReducer
+  };
 };
 
-export default Header;
+export default connect(mapStateToProps)(HeaderComponent);
