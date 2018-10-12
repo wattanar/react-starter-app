@@ -1,11 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
-import Store from "./Store";
-import App from "./App";
-import registerServiceWorker from "./registerServiceWorker";
-import { BrowserRouter } from "react-router-dom";
-import "./styles/app.css";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import Store from './Store';
+import App from './App';
+import registerServiceWorker from './registerServiceWorker';
+import { BrowserRouter } from 'react-router-dom';
+import './styles/app.css';
 
 ReactDOM.render(
   <Provider store={Store}>
@@ -13,6 +13,6 @@ ReactDOM.render(
       <App />
     </BrowserRouter>
   </Provider>,
-  document.getElementById("root")
+  document.getElementById('root')
 );
 registerServiceWorker();

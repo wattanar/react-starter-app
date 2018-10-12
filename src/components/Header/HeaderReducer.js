@@ -1,12 +1,12 @@
-import { SET_PROJECT_NAME } from "./HeaderType";
+import { SAMPLE_ACTION } from './HeaderType';
 
 const intitialState = {
-  projectName: "React Starter App"
+  projectName: 'React Starter App'
 };
 
 export const HeaderReducer = (state = intitialState, action) => {
   switch (action.type) {
-    case SET_PROJECT_NAME:
+    case SAMPLE_ACTION:
       return { ...state, projectName: action.payload };
     default:
       return state;
