@@ -1,6 +1,6 @@
-import { SET_PROJECT_NAME } from "./HeaderType";
+import { SAMPLE_ACTION } from './HeaderType';
 
 export const actionName = () => ({
-  type: SET_PROJECT_NAME,
-  payload: ""
+  type: SAMPLE_ACTION,
+  payload: ''
 });

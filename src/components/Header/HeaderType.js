@@ -1,1 +1,1 @@
-export const SET_PROJECT_NAME = "SET_PROJECT_NAME";
+export const SAMPLE_ACTION = "SAMPLE_ACTION";

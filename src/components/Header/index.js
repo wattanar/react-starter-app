@@ -1,9 +1,9 @@
-import { connect } from "react-redux";
-import HeaderComponent from "./HeaderComponent";
+import { connect } from 'react-redux';
+import HeaderComponent from './HeaderComponent';
 
 const mapStateToProps = state => {
   return {
-    headerState: state.HeaderReducer
+    HeaderState: state.HeaderReducer
   };
 };
 
