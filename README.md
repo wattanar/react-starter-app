@@ -6,7 +6,7 @@ Create react app with redux and react router for ready to develop your lovely re
 
 ```shell
 # clone this repo
-git clone https://github.com/wattanar/react-starter-app.git [my-project]
+git clone https://github.com/wattanar/react-starter-app.git my-react-app
 
 # install dependency
 yarn
