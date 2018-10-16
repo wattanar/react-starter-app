@@ -24,6 +24,7 @@
     "fs-extra": "^7.0.0",
     "gh-pages": "^1.2.0",
     "pascal-case": "^2.0.1",
+    "prettier": "^1.14.3",
     "replace-in-file": "^3.4.2",
     "signale": "^1.3.0"
   }
