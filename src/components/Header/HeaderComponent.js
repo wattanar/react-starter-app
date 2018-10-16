@@ -28,6 +28,11 @@ class HeaderComponent extends React.Component {
                   Home
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link to="/about" className="nav-link">
+                  About
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -37,7 +42,8 @@ class HeaderComponent extends React.Component {
 }
 
 const HeaderStyle = {
-  background: "#273c75"
+  background: "#1976d2",
+  color: "#ffffff"
 };
 
 export default HeaderComponent;
