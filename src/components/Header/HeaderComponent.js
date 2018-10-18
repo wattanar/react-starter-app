@@ -9,7 +9,7 @@ class HeaderComponent extends React.Component {
           <Link to="/" className="navbar-brand">
             {this.props.HeaderState.projectName}
           </Link>
-          <button
+          <button 
             className="navbar-toggler"
             type="button"
             data-toggle="collapse"
