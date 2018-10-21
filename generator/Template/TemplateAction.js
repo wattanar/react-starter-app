@@ -1,6 +1,6 @@
-import { SAMPLE_ACTION } from './TemplateType';
+import { ACTION_NAME } from "./TemplateType";
 
 export const actionName = () => ({
-  type: SAMPLE_ACTION,
-  payload: ''
+  type: ACTION_NAME,
+  payload: ""
 });

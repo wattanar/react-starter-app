@@ -1,13 +1,13 @@
-import { SAMPLE_ACTION } from './TemplateType';
+import { ACTION_NAME } from "./TemplateType";
 
 const intitialState = {
-  name: ''
+  app_name: ""
 };
 
 export const TemplateReducer = (state = intitialState, action) => {
   switch (action.type) {
-    case SAMPLE_ACTION:
-      return { ...state, name: action.payload };
+    case ACTION_NAME:
+      return { ...state, app_name: action.payload };
     default:
       return state;
   }

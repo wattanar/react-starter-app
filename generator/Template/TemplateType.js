@@ -1,1 +1,1 @@
-export const SAMPLE_ACTION = "SAMPLE_ACTION";
+export const ACTION_NAME = "ACTION_NAME";
