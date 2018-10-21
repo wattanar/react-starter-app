@@ -5,13 +5,13 @@ import NotFound from "./components/NotFound";
 
 const Routes = () => {
   return (
-    <div className="container">
+    <React.Fragment>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/hello/:name" component={Home} />
         <Route component={NotFound} />
       </Switch>
-    </div>
+    </React.Fragment>
   );
 };
 
