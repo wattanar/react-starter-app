@@ -1,13 +1,13 @@
-import { SAMPLE_ACTION } from './HomeType';
+import { ACTION_NAME } from "./HomeType";
 
 const intitialState = {
-  name: ''
+  hello: "Hello"
 };
 
 export const HomeReducer = (state = intitialState, action) => {
   switch (action.type) {
-    case SAMPLE_ACTION:
-      return { ...state, name: action.payload };
+    case ACTION_NAME:
+      return { ...state, hello: action.payload };
     default:
       return state;
   }

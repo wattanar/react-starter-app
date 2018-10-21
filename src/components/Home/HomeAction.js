@@ -1,6 +1,6 @@
-import { SAMPLE_ACTION } from './HomeType';
+import { ACTION_NAME } from "./HomeType";
 
 export const actionName = () => ({
-  type: SAMPLE_ACTION,
-  payload: ''
+  type: ACTION_NAME,
+  payload: ""
 });
