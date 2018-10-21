@@ -8,7 +8,7 @@ const Routes = () => {
     <div className="container">
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/:name" component={Home} />
+        <Route exact path="/hello/:name" component={Home} />
         <Route component={NotFound} />
       </Switch>
     </div>
