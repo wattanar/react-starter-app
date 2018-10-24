@@ -28,8 +28,8 @@ args.name.map(v => {
 async function copyTemplate() {
   try {
     let a = await fs.copy(
-      "./generator/Template/index.js",
-      `./src/components/${componentName}/index.js`
+      "./generator/Template/TemplateContainer.js",
+      `./src/components/${componentName}/${componentName}Container.js`
     );
 
     await fs.copy(
@@ -56,7 +56,7 @@ async function copyTemplate() {
 
     const replaceOptions = {
       files: [
-        `./src/components/${componentName}/index.js`,
+        `./src/components/${componentName}/${componentName}Container.js`,
         `./src/components/${componentName}/${componentName}Component.js`,
         `./src/components/${componentName}/${componentName}Type.js`,
         `./src/components/${componentName}/${componentName}Action.js`,
