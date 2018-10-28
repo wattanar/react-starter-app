@@ -1,31 +1,20 @@
 import React from "react";
-import { hydrate, render } from "react-dom";
+import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import Store from "./Store";
-import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
 import { BrowserRouter } from "react-router-dom";
 
-const rootElement = document.getElementById("root");
+const App = React.lazy(() => import("./App"));
 
-if (rootElement.hasChildNodes()) {
-  hydrate(
-    <Provider store={Store}>
-      <BrowserRouter>
+ReactDOM.render(
+  <Provider store={Store}>
+    <BrowserRouter>
+      <React.Suspense fallback={<div>Loading...</div>}>
         <App />
-      </BrowserRouter>
-    </Provider>,
-    rootElement
-  );
-} else {
-  render(
-    <Provider store={Store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </Provider>,
-    rootElement
-  );
-}
-
+      </React.Suspense>
+    </BrowserRouter>
+  </Provider>,
+  document.getElementById("root")
+);
 registerServiceWorker();

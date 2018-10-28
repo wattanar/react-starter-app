@@ -1,7 +1,7 @@
 import { ACTION_NAME } from "./HomeType";
 
 const intitialState = {
-  hello: "Hello"
+  hello: "Hello, World!"
 };
 
 export const HomeReducer = (state = intitialState, action) => {

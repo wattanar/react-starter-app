@@ -4,7 +4,7 @@ class NotFoundComponent extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <h1>Page not Found!</h1>
+        <h1>Page not found!</h1>
       </React.Fragment>
     );
   }
