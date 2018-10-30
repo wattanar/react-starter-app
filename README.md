@@ -21,7 +21,7 @@ yarn start
 Create component with single command.
 
 ```shell
-yarn g -n User
+yarn generate -n User
 ```
 
 All necessary file are generated.
