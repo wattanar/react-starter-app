@@ -5,6 +5,8 @@ import Store from "./Store";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter } from "react-router-dom";
 
+import "bootstrap/dist/css/bootstrap.css";
+
 const App = React.lazy(() => import("./App"));
 
 ReactDOM.render(
