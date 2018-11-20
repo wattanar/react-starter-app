@@ -11,8 +11,8 @@ const optionDefinitions = [
     name: "name",
     alias: "n",
     type: String,
-    multiple: true
-  }
+    multiple: true,
+  },
 ];
 
 const args = commandLineArgs(optionDefinitions, { partial: true });
@@ -21,13 +21,13 @@ if (args.name.length === 0) {
   throw new Error("No component name!");
 }
 
-args.name.map(v => {
+args.name.map((v) => {
   componentName += pascalCase(v);
 });
 
-async function copyTemplate() {
+(async () => {
   try {
-    let a = await fs.copy(
+    await fs.copy(
       "./generator/Template/TemplateContainer.js",
       `./src/components/${componentName}/${componentName}Container.js`
     );
@@ -52,6 +52,11 @@ async function copyTemplate() {
       `./src/components/${componentName}/${componentName}Reducer.js`
     );
 
+    await fs.copy(
+      "./generator/Template/TemplateStyle.css",
+      `./src/components/${componentName}/${componentName}Style.css`
+    );
+
     signale.success("Generated component completed!");
 
     const replaceOptions = {
@@ -60,10 +65,11 @@ async function copyTemplate() {
         `./src/components/${componentName}/${componentName}Component.js`,
         `./src/components/${componentName}/${componentName}Type.js`,
         `./src/components/${componentName}/${componentName}Action.js`,
-        `./src/components/${componentName}/${componentName}Reducer.js`
+        `./src/components/${componentName}/${componentName}Reducer.js`,
+        `./src/components/${componentName}/${componentName}Style.css`,
       ],
       from: /Template/g,
-      to: `${componentName}`
+      to: `${componentName}`,
     };
 
     replace(replaceOptions, (err, changes) => {
@@ -75,6 +81,4 @@ async function copyTemplate() {
   } catch (err) {
     throw err;
   }
-}
-
-copyTemplate();
+})();

@@ -1,6 +1,6 @@
-import { ACTION_NAME } from "./TemplateType";
+import * as Type from "./TemplateType";
 
-export const actionName = () => ({
-  type: ACTION_NAME,
-  payload: ""
+export const helloBack = () => ({
+  type: Type.HELLO,
+  payload: "Hello! ❤",
 });
