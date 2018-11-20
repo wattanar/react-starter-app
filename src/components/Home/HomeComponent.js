@@ -1,13 +1,21 @@
 import React from "react";
-import Layout from "../../Layout";
+import MainLayout from "../../layouts/MainLayout";
+import "./HomeStyle.css";
 
 class HomeComponent extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Layout>
-          <h1>{this.props.HomeState.hello}</h1>
-        </Layout>
+        <MainLayout>
+          <div className="hello">
+            <h1>{this.props.HomeState.hello}</h1>
+            <div>
+              <button onClick={this.props.helloBack.bind(this)}>
+                Hello Back!
+              </button>
+            </div>
+          </div>
+        </MainLayout>
       </React.Fragment>
     );
   }

@@ -1,14 +1,16 @@
-import { ACTION_NAME } from "./HomeType";
+import * as Type from "./HomeType";
 
 const intitialState = {
-  hello: "Hello, World!"
+  hello: "Hello, World!",
 };
 
-export const HomeReducer = (state = intitialState, action) => {
+const HomeReducer = (state = intitialState, action) => {
   switch (action.type) {
-    case ACTION_NAME:
+    case Type.HELLO:
       return { ...state, hello: action.payload };
     default:
       return state;
   }
 };
+
+export default HomeReducer;

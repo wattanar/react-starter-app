@@ -1,17 +1,20 @@
 import { connect } from "react-redux";
 import HomeComponent from "./HomeComponent";
-// import { actionName } from "./HomeAction";
+import * as Action from "./HomeAction";
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
-    HomeState: state.HomeReducer
+    HomeState: state.HomeReducer,
   };
 };
 
-// const mapDispatchToProps = (dispatch) => {
-// 	return {
-// 		actionName: () => dispatch(actionName()),
-// 	};
-// };
+const mapDispatchToProps = (dispatch) => {
+  return {
+    helloBack: () => dispatch(Action.helloBack()),
+  };
+};
 
-export default connect(mapStateToProps)(HomeComponent);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(HomeComponent);
