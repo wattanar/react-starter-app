@@ -1,10 +1,15 @@
 import React from "react";
-import Routes from "./Routes";
+import { Switch, Route } from "react-router-dom";
+import NotFound from "./components/NotFound/NotFoundContainer";
+import Home from "./components/Home/HomeContainer";
 
 const App = () => {
   return (
     <React.Fragment>
-      <Routes />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route component={NotFound} />
+      </Switch>
     </React.Fragment>
   );
 };

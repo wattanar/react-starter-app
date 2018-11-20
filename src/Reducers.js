@@ -1,10 +1,10 @@
 import { combineReducers } from "redux";
-import { HomeReducer } from "./components/Home/HomeReducer";
-import { HeaderReducer } from "./components/Header/HeaderReducer";
+import HomeReducer from "./components/Home/HomeReducer";
+import NavbarReducer from "./components/Navbar/NavbarReducer";
 
-const Reducers = combineReducers({
+const reducers = combineReducers({
   HomeReducer,
-  HeaderReducer
+  NavbarReducer,
 });
 
-export default Reducers;
+export default reducers;
