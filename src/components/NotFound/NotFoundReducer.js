@@ -1,14 +1,16 @@
-import { ACTION_NAME } from "./NotFoundType";
+import * as Action from "./NotFoundType";
 
 const intitialState = {
-  hello: "Hello, World!"
+  hello: "Hello, World!",
 };
 
-export const NotFoundReducer = (state = intitialState, action) => {
+const NotFoundReducer = (state = intitialState, action) => {
   switch (action.type) {
-    case ACTION_NAME:
+    case Action.HELLO:
       return { ...state, hello: action.payload };
     default:
       return state;
   }
 };
+
+export default NotFoundReducer;

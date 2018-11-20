@@ -1,6 +1,6 @@
-import { ACTION_NAME } from "./NotFoundType";
+import * as Action from "./NotFoundType";
 
-export const actionName = () => ({
-  type: ACTION_NAME,
-  payload: ""
+export const helloBack = () => ({
+  type: Action.HELLO,
+  payload: "Hello! ❤",
 });

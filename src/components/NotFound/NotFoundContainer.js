@@ -1,17 +1,20 @@
 import { connect } from "react-redux";
 import NotFoundComponent from "./NotFoundComponent";
-// import { actionName } from "./NotFoundAction";
+import * as Action from "./NotFoundAction";
 
-// const mapStateToProps = state => {
-//   return {
-//     NotFoundState: state.NotFoundReducer
-//   };
-// };
+const mapStateToProps = (state) => {
+  return {
+    NotFoundState: state.NotFoundReducer,
+  };
+};
 
-// const mapDispatchToProps = (dispatch) => {
-// 	return {
-// 		actionName: () => dispatch(actionName()),
-// 	};
-// };
+const mapDispatchToProps = (dispatch) => {
+  return {
+    helloBack: () => dispatch(Action.helloBack()),
+  };
+};
 
-export default connect()(NotFoundComponent);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(NotFoundComponent);

@@ -1,19 +1,19 @@
 import React from "react";
+import MainLayout from "../../layouts/MainLayout";
+import "./NotFoundStyle.css";
 
 class NotFoundComponent extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <h1 style={notFoundStyle}>404 - Page not found!</h1>
+        <MainLayout>
+          <div className="hello">
+            <h1>Not Found!</h1>
+          </div>
+        </MainLayout>
       </React.Fragment>
     );
   }
 }
-
-const notFoundStyle = {
-  textAlign: "center",
-  margin: "auto",
-  padding: "40px"
-};
 
 export default NotFoundComponent;
