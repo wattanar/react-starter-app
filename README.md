@@ -12,8 +12,11 @@ cd my-app
 # install dependency
 yarn
 
-# start app
-yarn start
+# start dev
+yarn dev
+
+# build
+yarn build
 ```
 
 # Generate components
@@ -33,4 +36,5 @@ src/components/User/
 ├── UserComponent.js
 ├── UserReducer.js
 └── UserType.js
+└── UserStyle.css
 ```
