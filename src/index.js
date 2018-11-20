@@ -1,20 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import Store from "./Store";
+import store from "./store";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter } from "react-router-dom";
+import App from "./App";
 
-import "bootstrap/dist/css/bootstrap.css";
-
-const App = React.lazy(() => import("./App"));
+import "./styles/bootstrap.min.css";
 
 ReactDOM.render(
-  <Provider store={Store}>
+  <Provider store={store}>
     <BrowserRouter>
-      <React.Suspense fallback={<div>Loading...</div>}>
-        <App />
-      </React.Suspense>
+      <App />
     </BrowserRouter>
   </Provider>,
   document.getElementById("root")
