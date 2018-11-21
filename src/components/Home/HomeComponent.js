@@ -4,15 +4,14 @@ import "./HomeStyle.css";
 
 class HomeComponent extends React.Component {
   render() {
+    const props = this.props;
     return (
       <React.Fragment>
         <MainLayout>
           <div className="hello">
-            <h1>{this.props.HomeState.hello}</h1>
+            <h1>{props.HomeState.hello}</h1>
             <div>
-              <button onClick={this.props.helloBack.bind(this)}>
-                Hello Back!
-              </button>
+              <button onClick={props.helloBack.bind(this)}>Hello Back!</button>
             </div>
           </div>
         </MainLayout>
