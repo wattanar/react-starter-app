@@ -3,14 +3,13 @@ import "./TemplateStyle.css";
 
 class TemplateComponent extends React.Component {
   render() {
+    const props = this.props;
     return (
       <React.Fragment>
         <div className="hello">
-          <h1>{this.props.TemplateState.hello}</h1>
+          <h1>{props.TemplateState.hello}</h1>
           <div>
-            <button onClick={this.props.helloBack.bind(this)}>
-              Hello Back!
-            </button>
+            <button onClick={props.helloBack.bind(this)}>Hello Back!</button>
           </div>
         </div>
       </React.Fragment>
