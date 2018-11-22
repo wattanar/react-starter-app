@@ -35,6 +35,6 @@ src/components/User/
 ├── UserAction.js
 ├── UserComponent.js
 ├── UserReducer.js
-└── UserType.js
+├── UserType.js
 └── UserStyle.css
 ```
